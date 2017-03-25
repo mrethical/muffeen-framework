@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": { 
+            "Muffeen\\Framework\\": "system/", 
+            "App\\Controllers\\": "app/Controllers/",
+            "App\\Models\\": "app/Models/"
+        },
+        "files": [
+            "system/Functions/_include.php"
+        ]
+    },
+    "require": {
+        "symfony/debug": "^3.2"
+    }
+}
