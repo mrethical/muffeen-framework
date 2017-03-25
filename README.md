@@ -1,6 +1,5 @@
 
 # Muffeen Framework
----
 ##### System Requirements
 - Server Production Minimum Requirements
   - PHP 5.3+

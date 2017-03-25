@@ -7,4 +7,5 @@ use Muffeen\Framework\Components\Router;
  *	  - set your url routes here.
  */
 
+Router::get('/', 'PagesController@index');
  

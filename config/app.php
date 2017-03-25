@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'app_name' => 'Muffeen',
+	'app_name' => 'Muffeen Framework',
 	'base_url' => 'http://localhost/',
 	'timezone' => 'Asia/Manila',
 	'environment' => 'development',
