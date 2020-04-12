@@ -4,7 +4,12 @@ namespace Muffeen\Framework\Components;
 
 class Request
 {
-
+    /**
+     * Get parameters from GET request.
+     *
+     * @param  string $input
+     * @return mixed
+     */
     public static function get($input = null)
     {
         if ($input === null) {
@@ -16,6 +21,12 @@ class Request
         return null;
     }
 
+    /**
+     * Get parameters from POST request.
+     *
+     * @param  string $input
+     * @return mixed
+     */
     public static function post($input = null)
     {
         if ($input === null) {
@@ -27,6 +38,12 @@ class Request
         return null;
     }
 
+    /**
+     * Get files from request.
+     *
+     * @param  string $file
+     * @return mixed
+     */
     public static function files($file = null)
     {
         if ($file === null) {
@@ -38,11 +55,21 @@ class Request
         return null;
     }
 
+    /**
+     * Get url path.
+     *
+     * @return string
+     */
     public static function uri()
     {
         return explode('?', $_SERVER['REQUEST_URI'])[0];
     }
 
+    /**
+     * Get request method.
+     *
+     * @return string
+     */
     public static function method()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -59,9 +86,13 @@ class Request
         return $_SERVER['REQUEST_METHOD'];
     }
 
-    public static function isXmlHttpRequest()
+    /**
+     * Check if request is ajax.
+     *
+     * @return bool
+     */
+    public static function isAjax()
     {
         return strtolower(array_get($_SERVER, 'HTTP_X_REQUESTED_WITH')) === 'xmlhttprequest';
     }
-
 }

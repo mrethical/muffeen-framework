@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title><?= config('app_name') ?></title>
 	<style>

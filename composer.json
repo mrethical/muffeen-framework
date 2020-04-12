@@ -1,7 +1,27 @@
 {
+    "name": "mrethical/url-status",
+    "description": "A simple and lightweight project that demonstrates the MVC framework concept in PHP.",
+    "homepage": "https://github.com/mrethical/muffeen-framework",
+    "authors": [
+        {
+            "name": "Jefferson Magboo",
+            "email": "jeffersonmagboo21@gmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "symfony/debug": "^3.2"
+    },
     "autoload": {
-        "psr-4": { 
-            "Muffeen\\Framework\\": "system/", 
+        "psr-4": {
+            "Muffeen\\Framework\\": "system/",
             "App\\Controllers\\": "app/Controllers/",
             "App\\Models\\": "app/Models/"
         },
@@ -9,7 +29,10 @@
             "system/Functions/_include.php"
         ]
     },
-    "require": {
-        "symfony/debug": "^3.2"
-    }
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

@@ -4,11 +4,16 @@ namespace Muffeen\Framework\Components;
 
 use Muffeen\Framework\Components\PDO;
 
-class Model 
+class Model
 {
-
+    /** @var \PDO */
 	protected static $pdo;
 
+    /**
+     * Initialize model.
+     *
+     * @return void
+     */
 	protected static function initialize()
 	{
 		if (null === Container::get('pdo')) {
@@ -18,5 +23,4 @@ class Model
 		}
 		self::$pdo = Container::get('pdo');
 	}
-
 }

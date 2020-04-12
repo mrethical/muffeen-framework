@@ -4,7 +4,7 @@ use Muffeen\Framework\Components\Container;
 use Muffeen\Framework\Components\Loader;
 use Muffeen\Framework\Components\Request;
 use Muffeen\Framework\Components\Router;
-use Muffeen\Framework\Exception\RouteException;
+use Symfony\Component\Debug\Debug;
 
 
 /**************************************************
@@ -17,12 +17,19 @@ use Muffeen\Framework\Exception\RouteException;
 
 require '../vendor/autoload.php';
 
+/**
+ *	Require functions.
+ */
+
+require 'Functions/_include.php';
+
 
 /**
  *	Load configuration files and save to container
  */
 
 Container::bind('config', require '../config/app.php');
+$config = Container::get('config');
 
 
 /**
@@ -36,7 +43,7 @@ Container::bind('root_dir', dirname(__DIR__));
  *	Set timezone
  */
 
-date_default_timezone_set(Container::get('config')['timezone']);
+date_default_timezone_set($config['timezone']);
 
 
 /**
@@ -44,7 +51,7 @@ date_default_timezone_set(Container::get('config')['timezone']);
  */
 
 if (config('environment') !== 'production') {
-	\Symfony\Component\Debug\Debug::enable();
+	Debug::enable();
 	if (config('environment') !== 'development') {
 		throw new Exception('Unknown enviroment configuration is set.');
 	}

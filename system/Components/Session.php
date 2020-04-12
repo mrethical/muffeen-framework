@@ -4,10 +4,15 @@ namespace Muffeen\Framework\Components;
 
 class Session
 {
-
+    /** @var bool */
     protected static $session_started = false;
 
-    protected function initSession()
+    /**
+     * Initialize session.
+     *
+     * @return void
+     */
+    protected static function initSession()
     {
         if (!self::$session_started) {
             session_start();
@@ -15,13 +20,26 @@ class Session
         }
     }
 
+    /**
+     * Set session.
+     *
+     * @param  string $key
+     * @param  string $value
+     * @return void
+     */
     public static function set($key, $value)
     {
         self::initSession();
         $_SESSION[$key] = $value;
     }
 
-    public static function unset($key)
+    /**
+     * Remove key from session.
+     *
+     * @param  string $key
+     * @return void
+     */
+    public static function remove($key)
     {
         self::initSession();
         if (array_key_exists($key, $_SESSION)) {
@@ -29,6 +47,12 @@ class Session
         }
     }
 
+    /**
+     * Get session.
+     *
+     * @param  string $input
+     * @return mixed
+     */
     public static function get($input)
     {
         self::initSession();
@@ -37,5 +61,4 @@ class Session
         }
         return null;
     }
-
 }

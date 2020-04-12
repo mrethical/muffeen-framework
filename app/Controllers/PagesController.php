@@ -2,11 +2,10 @@
 
 namespace App\Controllers;
 
-class PagesController {
-
+class PagesController
+{
 	public function index()
 	{
 		return view('index');
 	}
-
 }

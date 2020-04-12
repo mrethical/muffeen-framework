@@ -1,6 +1,16 @@
 <?php
 
-function config($key) 
-{
-	return \Muffeen\Framework\Components\Container::get('config')[$key];
+use Muffeen\Framework\Components\Container;
+
+if (! function_exists('config')) {
+    /**
+     * Get configuration.
+     *
+     * @param  string $key
+     * @return mixed
+     */
+    function config($key) {
+        $config = Container::get('config');
+        return $config[$key];
+    }
 }
