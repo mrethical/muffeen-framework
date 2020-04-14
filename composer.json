@@ -1,6 +1,11 @@
 {
     "name": "mrethical/url-status",
     "description": "A simple and lightweight project that demonstrates the MVC framework concept in PHP.",
+    "keywords": [
+        "php",
+        "mvc",
+        "framework"
+    ],
     "homepage": "https://github.com/mrethical/muffeen-framework",
     "authors": [
         {
