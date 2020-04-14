@@ -18,7 +18,6 @@ class Request
         if (isset($_GET[$input])) {
             return $_GET[$input];
         }
-        return null;
     }
 
     /**
@@ -35,7 +34,6 @@ class Request
         if (isset($_POST[$input])) {
             return $_POST[$input];
         }
-        return null;
     }
 
     /**
@@ -52,7 +50,6 @@ class Request
         if (isset($_FILES[$file])) {
             return $_FILES[$file];
         }
-        return null;
     }
 
     /**
@@ -83,6 +80,7 @@ class Request
                 return 'DELETE';
             }
         }
+
         return $_SERVER['REQUEST_METHOD'];
     }
 

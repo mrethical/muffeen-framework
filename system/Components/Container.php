@@ -21,17 +21,17 @@ class Container
     }
 
     /**
-     * Get value from container
+     * Get value from container.
      *
      * @param   string $key
      * @return  mixed
      */
     public static function get($key)
     {
-        if (!array_key_exists($key, static::$registry)) {
-            handle_exception(new ContainerException('No ' . $key . ' is bound in the container.'));
+        if (! array_key_exists($key, static::$registry)) {
+            handle_exception(new ContainerException('No '.$key.' is bound in the container.'));
         }
+
         return static::$registry[$key];
     }
-
 }

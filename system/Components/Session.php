@@ -14,7 +14,7 @@ class Session
      */
     protected static function initSession()
     {
-        if (!self::$session_started) {
+        if (! self::$session_started) {
             session_start();
             self::$session_started = true;
         }
@@ -59,6 +59,5 @@ class Session
         if (isset($_SESSION[$input])) {
             return $_SESSION[$input];
         }
-        return null;
     }
 }

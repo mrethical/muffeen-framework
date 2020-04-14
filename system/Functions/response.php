@@ -66,7 +66,7 @@ if (! function_exists('redirect')) {
      */
     function redirect($path = '/', $http_response_code = null)
     {
-        header("Location: " . $path);
+        header('Location: '.$path);
         exit();
     }
 }

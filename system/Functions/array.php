@@ -8,10 +8,10 @@ if (! function_exists('array_get')) {
      * @param  string $key
      * @return mixed
      */
-    function array_get($array, $key) {
+    function array_get($array, $key)
+    {
         if (array_key_exists($key, $array)) {
             return $array[$key];
         }
-        return null;
     }
 }

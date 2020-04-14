@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class PagesController
 {
-	public function index()
-	{
-		return view('index');
-	}
+    public function index()
+    {
+        return view('index');
+    }
 }
