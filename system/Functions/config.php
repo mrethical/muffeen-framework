@@ -9,8 +9,10 @@ if (! function_exists('config')) {
      * @param  string $key
      * @return mixed
      */
-    function config($key) {
+    function config($key)
+    {
         $config = Container::get('config');
+
         return $config[$key];
     }
 }
