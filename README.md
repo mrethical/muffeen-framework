@@ -1,5 +1,6 @@
 
 # Muffeen Framework
+[![StyleCI](https://github.styleci.io/repos/86130813/shield?branch=master)](https://github.styleci.io/repos/86130813)
 
 A simple and lightweight project that demonstrates the MVC framework concept in PHP. Its not intended for production use, instead use sophisticated frameworks like [Laravel](https://laravel.com/) or [Symfony](https://symfony.com/).
 ### System Requirements
